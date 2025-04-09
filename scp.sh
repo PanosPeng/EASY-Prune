@@ -10,10 +10,15 @@ scp -r /Users/panospeng/Desktop/USMLE h200-223:/export/ruc
 
 scp -r /Users/panospeng/Desktop/EASY-Prune/sglang/sglang h200-223:/usr/local/anaconda3/envs/train/lib/python3.10/site-packages
 
-scp -r /Users/panospeng/Desktop/EASY-Prune/sglang/sglang_raw/sglang/srt h200-223:/usr/local/anaconda3/envs/expert2/lib/python3.12/site-packages/sglang
+scp -r /Users/panospeng/Desktop/EASY-Prune/sglang/sglang_full/sglang h200-223:/usr/local/anaconda3/envs/expert/lib/python3.12/site-packages
 
+scp -r /Users/panospeng/Desktop/EASY-Prune/sglang/sglang_pruned/sglang h200-223:/usr/local/anaconda3/envs/train/lib/python3.10/site-packages
+
+scp -r /Users/panospeng/Desktop/EASY-Prune/sglang/sglang_pruned/sglang/srt h200-223:/usr/local/anaconda3/envs/expert4/lib/python3.12/site-packages/sglang
+
+/usr/local/anaconda3/envs/expert4/lib/python3.12/site-packages/sglang
 # H200 download
-scp -r h200-223:/usr/local/anaconda3/envs/expert2/lib/python3.12/site-packages/sglang /Users/panospeng/Desktop/EASY-Prune/sglang/sglang_full
+scp -r h200-223:/usr/local/anaconda3/envs/expert2/lib/python3.12/site-packages/sglang /Users/panospeng/Desktop/EASY-Prune/sglang/sglang_pruned
 
 scp -r h200-223:/usr/local/anaconda3/envs/expert2/lib/python3.12/site-packages/sglang /Users/panospeng/Desktop/EASY-Prune/final_sglang/sglang_prune
 

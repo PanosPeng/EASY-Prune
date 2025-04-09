@@ -162,6 +162,11 @@ def biased_grouped_topk(
     if renormalize:
         topk_weights = topk_weights / topk_weights.sum(dim=-1, keepdim=True)
 
+    # cumsum_idx = torch.cumsum(experts, dim=-1) - 1
+    # cumsum_idx = cumsum_idx.masked_fill(experts == 0, -1)
+    # mapped_topk_ids = cumsum_idx.gather(0, topk_ids)
+    # topk_ids = mapped_topk_ids
+
     cumsum_idx = torch.cumsum(experts, dim=0) - 1           # shape [e]
     cumsum_idx = cumsum_idx.masked_fill(experts == 0, -1)   # shape [e]
     mapped_topk_ids = cumsum_idx[topk_ids]                  # shape [n, topk]

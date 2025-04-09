@@ -65,7 +65,7 @@ if is_cuda_available():
     from sgl_kernel import bmm_fp8
 
 import os
-current_fp = "EASYEP/expert_statistics/expert_mask/aime23_full_br_64.json"
+current_fp = "/export/ruc/EASY-Prune/expert_statistics/expert_mask/aime23_full_br_64.json"
 
 if os.path.exists(current_fp):
     with open(current_fp,'r') as fp:
